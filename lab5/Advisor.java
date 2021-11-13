@@ -32,13 +32,9 @@ public class Advisor {
         this.AdvisorDept = AdvisorDept;
     }
 
-    @Override
+    
     public String toString() {
-        return "{" +
-            " AdvisorID='" + getAdvisorID() + "'" +
-            ", AdvisorName='" + getAdvisorName() + "'" +
-            ", AdvisorDept='" + getAdvisorDept() + "'" +
-            "}";
+        return String.format("name %s ID %d Dept %s ",getAdvisorName(),getAdvisorID(),getAdvisorDept());
     }
     
 
