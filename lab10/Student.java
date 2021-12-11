@@ -1,34 +1,20 @@
-public class Student{
-    private int id;
-    private String name;
-    private double GPA;
+public class Student extends Person{
 
-    public Student(int id, String name) {
-        this.id = id;
-        this.name = name;
+    private float GPA;
+
+    public Student(int ID, String name) {
+        super(ID, name);
     }
-    public Student(int id, String name,double GPA) {
-        this.id = id;
-        this.name = name;
+    public Student(int ID, String name,float GPA) {
+        super(ID, name);
         this.GPA = GPA;
     }
-
-    public int getId() {
-        return this.id;
+    @Override
+    public void setID(int ID) {
+        if (ID > 200000000 && ID < 299999999 ){
+            this.ID = ID;
+        }
     }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public float getGPA() {
         return this.GPA;
     }
@@ -38,12 +24,10 @@ public class Student{
     }
 
     @Override
-    public String displayInto() {
-        return "{" +
-            " id='" + getId() + "'" +
-            ", name='" + getName() + "'" +
-            ", GPA='" + getGPA() + "'" +
-            "}";
+    public void display() {
+        System.out.println("ID: "+ ID + "\n");
+        System.out.println("name: "+ name + "\n");
+        System.out.println("GPA: "+ GPA + "\n");
     }
 
 }
