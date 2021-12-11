@@ -70,7 +70,6 @@ public class Emplotee
     public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
     }
-    @Override
     public String toString() {
         return
         "ID: " + getId() + "\n" +
@@ -143,7 +142,7 @@ class Nurse extends Emplotee{
         this.position = position;
     }
 
-    @Override
+   @Override
     public String toString() {
         return 
         "ID: " + getId() + "\n" +
