@@ -15,7 +15,7 @@ public class main{
             }
             
             
-        } catch (NullPointerException e) {
+        } catch (ExceptionInInitializerError e) {
             System.out.println("Number less than zero");
             main(arg);
 
