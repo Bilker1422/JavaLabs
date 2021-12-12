@@ -7,22 +7,22 @@ public class main{
             int second = 1;
             int counter = in.nextInt();
             if(counter <0){
+            
+                throw new ExceptionInInitializerError();
             }
-                throw new ;
-
             else{
-                doit(first,second,counter);
+                number(first,second,counter);
             }
             
             
-        } catch (Exception e) {
+        } catch (NullPointerException e) {
             System.out.println("Number less than zero");
             main(arg);
 
         }
         
     }
-    public static int doit(int first, int second, int counter){
+    public static int number(int first, int second, int counter){
         int total = 0;
         if(counter != 0){
             System.out.print(first + " ");
@@ -30,12 +30,12 @@ public class main{
             first = second;
             second = total;
             counter--;
-            total = doit(first,second,counter);
+            total = number(first,second,counter);
         }
         else {
             System.out.print(first);
         }
         return 0;
     }
-    public static void 
+
 }
